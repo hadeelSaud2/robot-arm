@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>robot arm </title>
+	<link rel="stylesheet"  href="style.css">
+</head>
+<body>
+<form action="conect.php"  method="post">
+
+</form>
+	<h2>eng1</h2>
+  <div class="box">
+    <div class="slider">
+      <input type="range" name="eng1" min="0" max="180" value="30">
+    </div>
+    <div class="value"></div>
+  </div>
+<h2>eng2</h2>
+  <div class="box">
+    <div class="slider">
+      <input type="range" name="eng2" min="0" max="180" value="30">
+    </div>
+    <div class="value">180</div>
+  </div>
+<h2>eng3</h2>
+	<div class="box">
+		<div class="slider">
+			<input type="range" name="eng3" min="0" max="180" value="30">
+		</div>
+		<div class="value">180</div>
+	</div>
+<h2>eng4</h2>
+	<div class="box">
+		<div class="slider">
+			<input type="range" name="eng4" min="0" max="180" value="30">
+		</div>
+		<div class="value">180</div>
+	</div>
+<h2>eng5</h2>
+	<div class="box">
+		<div class="slider">
+			<input type="range" name="eng5" min="0" max="180" value="30">
+		</div>
+		<div class="value">180</div>
+	</div>
+<h2>eng6</h2>
+	<div class="box">
+		<div class="slider">
+			<input type="range" name="eng6" min="0" max="180" value="30">
+		</div>
+		<div class="value">180</div>
+	</div>
+
+	<button class="btn" >save</button>
+
+		 <button class="btn-outline">start</button>
+
+</body>
+
+  <script>
+
+    const slider = document.querySelectorAll("input");
+    const value = document.querySelectorAll(".value");
+
+for(let i=0; i < 6; i++){
+    value[i].textContent = slider[i].value;
+    slider[i].oninput = function()
+		{
+      value[i].textContent = this.value;
+    }}
+  </script>
+</html>
